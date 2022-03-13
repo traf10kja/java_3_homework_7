@@ -1,5 +1,6 @@
 public class Main {
+    private static StartTest st = new StartTest();
     public static void main(String[] args) {
-        StartTest.start(Test.class);
+        st.start(Test.class);
     }
 }

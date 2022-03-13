@@ -6,7 +6,9 @@ import java.util.List;
 
 public class StartTest {
 
-    public static void start(Class c) {
+ public Test test = new Test();
+
+    public void start(Class c) {
         List<Method> methods = new ArrayList<>();
         Method[] classMethods = c.getDeclaredMethods();
 
@@ -41,7 +43,7 @@ public class StartTest {
 
         for (Method m : methods) {
             try {
-                m.invoke(null);
+                m.invoke(test);
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             } catch (InvocationTargetException e) {
